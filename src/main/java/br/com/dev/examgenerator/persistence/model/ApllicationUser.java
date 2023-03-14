@@ -4,8 +4,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
 import jakarta.validation.constraints.NotEmpty;
+import lombok.Data;
 
 @Entity
+@Data
 public class ApllicationUser extends AbstractEntity {
     @NotEmpty(message = "The field username cannot be empty")
     @Column(unique = true)
